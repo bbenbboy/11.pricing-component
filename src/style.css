@@ -1,0 +1,234 @@
+:root {
+  --LinearGradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+/* A3A8F0 */
+/* 696FDD */
+
+/* background: rgb(163,168,240);
+background: linear-gradient(152deg, rgba(163,168,240,1) 30%, rgba(105,111,221,1) 70%); */
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--VeryLightGrayishBlue);
+  margin: 0;
+}
+/* img background */
+.top,
+.bottom {
+  position: absolute;
+  z-index: 0;
+}
+.top {
+  top: 0;
+  right: 0;
+}
+.bottom {
+  bottom: 0;
+  left: 0;
+}
+/* btn container */
+header {
+  margin: 50px auto;
+}
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--GrayishBlue);
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-container p {
+  margin: 5px 20px;
+  color: var(--GrayishBlue);
+}
+
+/* Card container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.card-design {
+  color: var(--GrayishBlue);
+  width: 320px;
+  height: 370px;
+  background-color: white;
+  box-shadow: 2px 0px 10px -1px rgba(163, 168, 240, 0.71);
+  -webkit-box-shadow: 2px 0px 10px -1px rgba(163, 168, 240, 0.71);
+  -moz-box-shadow: 2px 0px 10px -1px rgba(163, 168, 240, 0.71);
+  padding: 30px;
+}
+.card-design h1 {
+  font-size: 2rem;
+}
+.card1 {
+  border-radius: 20px 0 0 20px;
+}
+.card3 {
+  border-radius: 0 20px 20px 0;
+}
+.basic,
+.professional,
+.master {
+  font-size: 3rem;
+}
+.main {
+  background: rgb(163, 168, 240);
+  background: linear-gradient(
+    152deg,
+    rgba(163, 168, 240, 1) 30%,
+    rgba(105, 111, 221, 1) 70%
+  );
+  color: white;
+  height: 300;
+  padding: 50px 30px;
+  border-radius: 20px;
+}
+.main hr {
+  border: 0.5px solid var(--VeryLightGrayishBlue);
+}
+hr {
+  border: 0.5px solid var(--LightGrayishBlue);
+  margin: 20px auto;
+}
+.main .btn-learnmore {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+.btn-learnmore {
+  width: 320px;
+  color: white;
+  height: 40px;
+  border-radius: 5px;
+  border-style: none;
+  background: rgb(163, 168, 240);
+  background: linear-gradient(
+    152deg,
+    rgba(163, 168, 240, 1) 30%,
+    rgba(105, 111, 221, 1) 70%
+  );
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main .btn-learnmore:hover {
+  background: none;
+  color: white;
+  border: 0.5px solid white;
+}
+
+.btn-learnmore:hover {
+  background: white;
+  color: hsl(237, 63%, 64%);
+  border: 0.5px solid hsl(237, 63%, 64%);
+}
+
+/* Button */
+.onoffswitch {
+  position: relative;
+  width: 74px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50px;
+}
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: hsl(237, 63%, 64%);
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "";
+  padding-left: 10px;
+  background-color: hsl(236, 72%, 79%);
+  color: #ffffff;
+}
+.onoffswitch-inner:after {
+  content: "";
+  padding-right: 10px;
+  background-color: hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block;
+  width: 25px;
+  margin: 1.5px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 42px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    z-index: 1;
+  }
+  .card-container {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .card1,
+  .main,
+  .card3 {
+    border-radius: 20px;
+    height: auto;
+    padding: auto;
+  }
+  .top,
+  .bottom {
+    right: -5px;
+  }
+  .bottom {
+    visibility: hidden;
+  }
+}
